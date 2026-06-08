@@ -1,0 +1,20 @@
+<section id="certifications" class="section">
+  <div class="section__header" appScrollReveal>
+    <h2 class="section__title">Certifications</h2>
+    <p class="section__subtitle">Professional credentials</p>
+  </div>
+
+  <div class="certs-grid">
+    @for (cert of certifications(); track cert.name; let i = $index) {
+      <div class="cert-card" appScrollReveal [revealDelay]="i * 100">
+        <div class="cert-card__badge">
+          <img [src]="cert.image" [alt]="cert.name" />
+        </div>
+        <h3 class="cert-card__name">{{ cert.name }}</h3>
+        <a [href]="cert.url" target="_blank" rel="noopener" class="btn btn--small btn--primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Credential
+        </a>
+      </div>
+    }
+  </div>
+</section>

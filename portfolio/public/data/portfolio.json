@@ -1,0 +1,200 @@
+{
+  "personal": {
+    "profileImage": "/images/profile.png",
+    "name": "Santhosh Kumar S",
+    "role": "Full Stack Developer",
+    "about": "Building scalable software solutions that bridge business needs and user expectations. Passionate about creating efficient, reliable, and impactful applications that deliver measurable value.",
+    "email": "sk18284176@gmail.com",
+    "linkedin": {
+      "image": "/images/linkedin.png",
+      "url": "https://www.linkedin.com/in/santhosh-kumar-s-8559491a1"
+    },
+    "github": {
+      "image": "/images/github.jpg",
+      "url": "https://github.com/Santhoshkumar345"
+    },
+    "naukri": {
+      "image": "/images/naukri.png",
+      "url": "https://www.naukri.com/mnjuser/profile"
+    }
+  },
+  "stats": [
+    {
+      "title": "Experience",
+      "value": "2+ Years"
+    },
+    {
+      "title": "Projects",
+      "value": "4+"
+    },
+    {
+      "title": "Certifications",
+      "value": "4"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Programmer Analyst",
+      "company": "SwiftAnt IT Solutions India Pvt Ltd",
+      "years": "Jan 2025 - Present",
+      "project": [
+        {
+          "name": "Afrisure - InsureTech Platform",
+          "description": "Insurance product management and policy publishing platform.",
+          "techStack": [
+            ".NET Core",
+            "SQL Server",
+            "MongoDB",
+            "Azure"
+          ]
+        },
+        {
+          "name": "CSR - Corporate Solution Redefined",
+          "description": "Corporate travel and hotel booking platform.",
+          "techStack": [
+            ".NET Core",
+            "SQL Server",
+            "Angular",
+            "Azure"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Intern",
+      "company": "SwiftAnt IT Solutions India Pvt Ltd",
+      "years": "Sep 2024 - Jan 2025"
+    },
+    {
+      "role": "Intern",
+      "company": "Inmakes Infotech Pvt Ltd",
+      "years": "Mar 2024 - Aug 2024"
+    }
+  ],
+  "projects": [
+    {
+      "name": "SkiNet",
+      "image": "/images/skinet.png",
+      "details": "Full-stack e-commerce application with Redis caching, Stripe payments and SignalR real-time notifications.",
+      "projectUrl": "https://skinet-santhosh-kumar-project.vercel.app/",
+      "repoUrl": "https://bitbucket.org/first_tutorial_demo/skinet-frontend/src/main/",
+      "techStack": [
+        ".NET Web API",
+        "C#",
+        "SQL Server",
+        "Entity Framework Core",
+        "Angular",
+        "TypeScript",
+        "Redis"
+      ]
+    },
+    {
+      "name": "FluxCore",
+      "image": "/images/fluxcore.png",
+      "details": "Metadata-driven multi-tenant SaaS platform with dynamic dashboard rendering and tenant-isolated architecture.",
+      "projectUrl": "https://fluxcore-santhoshkumar-project.vercel.app/",
+      "repoUrl": "https://bitbucket.org/first_tutorial_demo/fluxcore-web/src/main/",
+      "techStack": [
+        ".NET 10",
+        "EF Core 10",
+        "Angular 21",
+        "TypeScript",
+        "SQL Server",
+        "JWT Authentication"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Microsoft Certified: Azure Developer Associate (AZ-204)",
+      "image": "/images/az204.png",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-gb/SanthoshKumarSivaKumar-6631/E74A8EF0B1FE50B7?sharingId=88BE1AC26A4C0548"
+    },
+    {
+      "name": "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
+      "image": "/images/az400.png",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-gb/SanthoshKumarSivaKumar-6631/37D08E998DC1340F?sharingId=88BE1AC26A4C0548"
+    },
+    {
+      "name": "Microsoft Certified: Azure Cosmos DB Developer Specialty (DP-420)",
+      "image": "/images/dp420.png",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-gb/SanthoshKumarSivaKumar-6631/A3C9B129482F50DC?sharingId=88BE1AC26A4C0548"
+    },
+    {
+      "name": "Anthropic Certified: Claude Code in Action",
+      "image": "/images/ai.png",
+      "url": "https://verify.skilljar.com/c/mnkbs9ipdvhp"
+    }
+  ],
+  "techStack": [
+    {
+      "name": ".NET",
+      "image": "/images/dotnet.png"
+    },
+    {
+      "name": "C#",
+      "image": "/images/csharp.png"
+    },
+    {
+      "name": "Angular",
+      "image": "/images/angular.png"
+    },
+    {
+      "name": "TypeScript",
+      "image": "/images/ts.png"
+    },
+    {
+      "name": "JavaScript",
+      "image": "/images/js.png"
+    },
+    {
+      "name": "SQL Server",
+      "image": "/images/sql.png"
+    },
+    {
+      "name": "MongoDB",
+      "image": "/images/mongodb.png"
+    },
+    {
+      "name": "Redis",
+      "image": "/images/redis.png"
+    },
+    {
+      "name": "Azure",
+      "image": "/images/azure.png"
+    },
+    {
+      "name": "Postman",
+      "image": "/images/postman.png"
+    },
+    {
+      "name": "GitHub",
+      "image": "/images/github.jpg"
+    }
+  ],
+  "education": [
+    {
+      "course": "Bachelor of Engineering - Mechanical Engineering",
+      "organisation": "Er. Perumal Manimekalai College of Engineering",
+      "year": "2022 - 2025"
+    },
+    {
+      "course": "Diploma in Mechanical Engineering",
+      "organisation": "Er. Perumal Manimekalai Polytechnic College",
+      "year": "2018 - 2020"
+    },
+    {
+      "course": "HSC 12th Grade",
+      "organisation": "St. Joseph Matriculation Higher Secondary School, Hosur",
+      "year": "2018"
+    },
+    {
+      "course": "SSLC 10th Grade",
+      "organisation": "St. Joseph Matriculation Higher Secondary School, Hosur",
+      "year": "2016"
+    }
+  ],
+  "resume": {
+    "url": "/documents/Santhosh_kumar_resume.pdf"
+  }
+}

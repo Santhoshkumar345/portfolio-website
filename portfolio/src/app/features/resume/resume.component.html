@@ -1,0 +1,26 @@
+<section id="resume" class="section">
+  <div class="section__header" appScrollReveal>
+    <h2 class="section__title">Resume</h2>
+    <p class="section__subtitle">My professional resume</p>
+  </div>
+
+  @if (resumeUrl(); as url) {
+    <div class="resume-container" appScrollReveal>
+      <div class="resume-card">
+        <div class="resume-card__preview">
+          @if (safeUrl(); as safe) {
+            <iframe [src]="safe" title="Resume Preview" type="application/pdf"></iframe>
+          }
+        </div>
+        <div class="resume-card__actions">
+          <button class="btn btn--primary" (click)="download()">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </button>
+          <a [href]="url" target="_blank" rel="noopener" class="btn btn--secondary">
+            <i class="fa-solid fa-expand"></i> View Full Screen
+          </a>
+        </div>
+      </div>
+    </div>
+  }
+</section>

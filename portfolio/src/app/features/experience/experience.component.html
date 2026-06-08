@@ -1,0 +1,39 @@
+<section id="experience" class="section">
+  <div class="section__header" appScrollReveal>
+    <h2 class="section__title">Experience</h2>
+    <p class="section__subtitle">My professional journey</p>
+  </div>
+
+  <div class="alt-timeline">
+    <div class="alt-timeline__stem"></div>
+    @for (exp of experience(); track exp.company; let i = $index) {
+      <div class="alt-timeline__item" [class.alt-timeline__item--right]="i % 2 !== 0" appScrollReveal [revealDelay]="i * 150">
+        <div class="alt-timeline__dot"></div>
+        <div class="alt-timeline__card">
+          <div class="alt-timeline__card-header">
+            <h3>{{ exp.role }}</h3>
+            <span class="alt-timeline__duration">{{ exp.years }}</span>
+          </div>
+          <p class="alt-timeline__company">
+            <i class="fa-solid fa-building"></i> {{ exp.company }}
+          </p>
+          @if (exp.project) {
+            <div class="alt-timeline__projects">
+              @for (proj of exp.project; track proj.name) {
+                <div class="alt-timeline__project">
+                  <h4>{{ proj.name }}</h4>
+                  <p>{{ proj.description }}</p>
+                  <div class="alt-timeline__tech">
+                    @for (tech of proj.techStack; track tech) {
+                      <span class="chip">{{ tech }}</span>
+                    }
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

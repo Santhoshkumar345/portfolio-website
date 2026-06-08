@@ -1,0 +1,24 @@
+<section id="education" class="section">
+  <div class="section__header" appScrollReveal>
+    <h2 class="section__title">Education</h2>
+    <p class="section__subtitle">My academic background</p>
+  </div>
+
+  <div class="alt-timeline">
+    <div class="alt-timeline__stem"></div>
+    @for (edu of education(); track edu.course; let i = $index) {
+      <div class="alt-timeline__item" [class.alt-timeline__item--right]="i % 2 !== 0" appScrollReveal [revealDelay]="i * 150">
+        <div class="alt-timeline__dot"></div>
+        <div class="alt-timeline__card">
+          <div class="alt-timeline__card-header">
+            <h3>{{ edu.course }}</h3>
+            <span class="alt-timeline__duration">{{ edu.year }}</span>
+          </div>
+          <p class="alt-timeline__company">
+            <i class="fa-solid fa-building-columns"></i> {{ edu.organisation }}
+          </p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section id="tech-stack" class="section">
+  <div class="section__header" appScrollReveal>
+    <h2 class="section__title">Tech Stack</h2>
+    <p class="section__subtitle">Technologies I work with</p>
+  </div>
+
+  <div class="carousel" appScrollReveal>
+    <div
+      class="carousel__track"
+      [class.paused]="isPaused"
+      (mouseenter)="pause()"
+      (mouseleave)="resume()"
+    >
+      @for (tech of duplicated(); track $index) {
+        <div class="carousel__card">
+          <img [src]="tech.image" [alt]="tech.name" />
+          <span>{{ tech.name }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

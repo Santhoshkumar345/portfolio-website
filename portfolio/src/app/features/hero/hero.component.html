@@ -1,0 +1,54 @@
+<section id="home" class="hero">
+  @if (data(); as portfolio) {
+    <div class="hero__content" appScrollReveal>
+      <div class="hero__text">
+        <p class="hero__greeting">Hello, I'm</p>
+        <h1 class="hero__name">{{ portfolio.personal.name }}</h1>
+        <h2 class="hero__role">{{ portfolio.personal.role }}</h2>
+        <p class="hero__about">{{ portfolio.personal.about }}</p>
+
+        <!-- Social Links -->
+        <div class="hero__socials">
+          <a [href]="portfolio.personal.linkedin.url" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img [src]="portfolio.personal.linkedin.image" alt="LinkedIn" />
+          </a>
+          <a [href]="portfolio.personal.github.url" target="_blank" rel="noopener" aria-label="GitHub">
+            <img [src]="portfolio.personal.github.image" alt="GitHub" />
+          </a>
+          <a [href]="portfolio.personal.naukri.url" target="_blank" rel="noopener" aria-label="Naukri">
+            <img [src]="portfolio.personal.naukri.image" alt="Naukri" />
+          </a>
+          <a [href]="'mailto:' + portfolio.personal.email" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__stats">
+          @for (stat of portfolio.stats; track stat.title) {
+            <div class="hero__stat-card">
+              <span class="hero__stat-value">{{ stat.value }}</span>
+              <span class="hero__stat-title">{{ stat.title }}</span>
+            </div>
+          }
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hero__cta">
+          <button class="btn btn--primary" (click)="scrollToExperience()">
+            <i class="fa-solid fa-briefcase"></i> View Experience
+          </button>
+          <button class="btn btn--secondary" (click)="downloadResume()">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__image">
+        <div class="hero__image-wrapper">
+          <img [src]="portfolio.personal.profileImage" [alt]="portfolio.personal.name" />
+        </div>
+      </div>
+    </div>
+  }
+</section>

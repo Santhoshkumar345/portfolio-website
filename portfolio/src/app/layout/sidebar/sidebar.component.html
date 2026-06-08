@@ -1,0 +1,47 @@
+<!-- Mobile hamburger -->
+<button class="hamburger" (click)="toggleSidebar()" [class.active]="isOpen()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Overlay -->
+<div class="overlay" [class.visible]="isOpen()" (click)="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<aside class="sidebar" [class.open]="isOpen()">
+  <!-- Profile -->
+  @if (portfolio(); as data) {
+    <div class="sidebar__profile">
+      <img [src]="data.personal.profileImage" [alt]="data.personal.name" class="sidebar__avatar" />
+      <h2 class="sidebar__name">{{ data.personal.name }}</h2>
+      <p class="sidebar__role">{{ data.personal.role }}</p>
+    </div>
+  }
+
+  <!-- Navigation -->
+  <nav class="sidebar__nav">
+    @for (item of navItems; track item.id) {
+      <a
+        class="sidebar__nav-item"
+        [class.active]="activeSection() === item.id"
+        (click)="scrollTo(item.id)"
+      >
+        <i [class]="item.icon"></i>
+        <span>{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <!-- Actions -->
+  <div class="sidebar__actions">
+    <button class="sidebar__btn sidebar__btn--theme" (click)="toggleTheme()">
+      <i [class]="isDark() ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
+      <span>{{ isDark() ? 'Light Mode' : 'Dark Mode' }}</span>
+    </button>
+    <button class="sidebar__btn sidebar__btn--resume" (click)="downloadResume()">
+      <i class="fa-solid fa-download"></i>
+      <span>Download Resume</span>
+    </button>
+  </div>
+</aside>

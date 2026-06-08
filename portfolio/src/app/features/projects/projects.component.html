@@ -1,0 +1,33 @@
+<section id="projects" class="section">
+  <div class="section__header" appScrollReveal>
+    <h2 class="section__title">Projects</h2>
+    <p class="section__subtitle">Things I've built</p>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects(); track project.name; let i = $index) {
+      <div class="project-card" appScrollReveal [revealDelay]="i * 150">
+        <div class="project-card__image">
+          <img [src]="project.image" [alt]="project.name" />
+        </div>
+        <div class="project-card__content">
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <p class="project-card__details">{{ project.details }}</p>
+          <div class="project-card__tech">
+            @for (tech of project.techStack; track tech) {
+              <span class="chip">{{ tech }}</span>
+            }
+          </div>
+          <div class="project-card__actions">
+            <a [href]="project.projectUrl" target="_blank" rel="noopener" class="btn btn--small btn--primary">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+            <a [href]="project.repoUrl" target="_blank" rel="noopener" class="btn btn--small btn--secondary">
+              <i class="fa-solid fa-code-branch"></i> Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

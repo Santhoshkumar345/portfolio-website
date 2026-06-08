@@ -1,0 +1,430 @@
+Angular Portfolio Website - Complete
+Implementation Guide
+Project Overview
+Build a modern, premium, fully responsive developer portfolio website using Angular.
+The portfolio must be data-driven using a single JSON configuration file ( portfolio.json ) containing
+all personal information, experience, projects, certifications, skills, education, social links and resume
+information.
+No content should be hardcoded in components.
+Tech Stack
+Angular 20+
+TypeScript
+SCSS
+Angular Animations
+RxJS
+Angular Signals
+Angular CDK
+Font Awesome Icons
+Responsive Design
+Dark / Light Theme Support
+Design Theme
+Create a premium modern portfolio similar to:
+Modern SaaS Landing Pages
+Developer Portfolio Websites
+Apple-like smooth interactions
+Clean minimal UI
+Professional enterprise appearance
+Design characteristics:
+Glassmorphism
+Soft shadows
+Smooth transitions
+Gradient accents
+Rounded cards
+Professional typography
+Micro interactions
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+1
+Smooth scrolling
+Layout
+Desktop Layout:
+Sidebar Main Content
+Hero
+Experience
+Projects
+Tech Stack
+Certifications
+Education
+Resume
+Contact
+------------------------------------------------
+Mobile Layout:
+Sidebar becomes slide drawer
+Hamburger menu
+Sections stacked vertically
+Sidebar Navigation
+Sticky sidebar on desktop.
+Contains:
+Profile Image
+Name
+Role
+Navigation Items:
+Home
+Experience
+Projects
+Tech Stack
+Certifications
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+2
+Education
+Resume
+Contact
+Additional Buttons:
+Dark / Light Toggle
+Download Resume
+Behavior:
+Smooth scroll to section
+Active section highlight
+Scroll spy functionality
+Hero Section
+Full viewport height.
+Content:
+Profile Image
+Name: Santhosh Kumar S
+Role: Full Stack Developer
+About Text: Load dynamically from JSON.
+Social Icons:
+LinkedIn
+GitHub
+Naukri
+Email
+Statistics Cards:
+Experience
+Projects
+Certifications
+CTA Buttons:
+Primary: "View Experience"
+Secondary: "Download Resume"
+Button Actions:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+3
+View Experience: Smooth scroll to Experience section.
+Download Resume: Download PDF from JSON URL.
+Hero Animations:
+Fade in
+Slide up
+Floating profile image
+Hover effects
+Experience Section
+Display as Timeline.
+Desktop:
+Left vertical timeline.
+Timeline Item Card:
+Role
+Company
+Duration
+Projects
+Each project:
+Project Name
+Description
+Technologies
+Animation:
+Cards appear on scroll.
+Timeline line animated while scrolling.
+Projects Section
+Display as responsive cards.
+Desktop:
+3 cards per row.
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+4
+Tablet:
+2 cards.
+Mobile:
+1 card.
+Each Project Card:
+Project Image
+Project Name
+Description
+Tech Stack Chips
+Live Demo Button
+Repository Button
+Card Effects:
+Hover elevate
+Shadow increase
+Image zoom effect
+Animation:
+Stagger card entrance.
+Tech Stack Section
+Display as animated carousel.
+Requirements:
+Horizontal infinite carousel.
+Each tech card contains:
+Technology Image
+Technology Name
+Behavior:
+Auto scroll
+Pause on hover
+Mobile swipe support
+Card Style:
+Glass card.
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+5
+Hover:
+Lift effect
+Glow effect
+Certifications Section
+Display as certification cards.
+Each card:
+Certification Badge Image
+Certification Name
+View Credential Button
+Behavior:
+Open certification URL in new tab.
+Animations:
+Reveal on scroll.
+Hover scaling.
+Education Section
+Display as Timeline.
+Each item contains:
+Course
+Organization
+Year
+Use same timeline style as experience.
+Animation:
+Scroll reveal.
+Resume Section
+Professional Resume Viewer.
+•
+•
+•
+•
+•
+•
+•
+•
+6
+Layout:
+Card Container
+Inside:
+Resume Preview
+Resume Download Button
+Implementation:
+Use iframe or embedded PDF viewer.
+Features:
+View Resume
+Download Resume
+Responsive PDF display.
+Contact Section
+Modern Contact Form.
+Fields:
+Name
+Email
+Subject
+Message
+Validation:
+Required
+Email format
+Display:
+Success Message
+Optional:
+Integrate EmailJS later.
+For now:
+Create reusable contact service.
+Animations:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+7
+Input focus effects.
+Theme System
+Implement Theme Service.
+Modes:
+Light
+Dark
+Requirements:
+Persist preference in localStorage.
+Auto load previous selection.
+Theme toggle in sidebar.
+Smooth color transitions.
+Use CSS variables.
+Example:
+--bg-color --text-color --card-color --accent-color
+Animations
+Use Angular Animations.
+Required:
+Fade In
+Slide Up
+Slide Left
+Slide Right
+Stagger List Animation
+Scroll Reveal
+Card Hover Effects
+Floating Hero Image
+Smooth Section Transitions
+Performance optimized.
+Use Intersection Observer where appropriate.
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+8
+Responsive Requirements
+Mobile First.
+Breakpoints:
+Mobile: < 768px
+Tablet: 768px - 1024px
+Desktop:
+1024px
+Requirements:
+No horizontal scrolling
+Touch friendly
+Responsive typography
+Responsive spacing
+Mobile drawer navigation
+Project Structure
+src/
+app/
+core/
+services/
+portfolio.service.ts
+theme.service.ts
+models/
+portfolio.model.ts
+shared/
+components
+directives
+pipes
+features/
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+9
+hero/ experience/ projects/ tech-stack/ certifications/ education/ resume/ contact/
+layout/
+sidebar
+navbar
+assets/
+data/ portfolio.json
+images/
+Data Loading
+Create PortfolioService.
+Responsibilities:
+Load portfolio.json
+Expose signals/observables
+Centralized data access
+No section should directly hardcode data.
+Everything must come from JSON.
+Accessibility
+Must include:
+Semantic HTML
+Keyboard navigation
+Focus states
+ARIA labels
+Proper heading hierarchy
+SEO
+Implement:
+Dynamic page title
+Meta description
+Open Graph tags
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+10
+Structured data
+Final Goal
+Create a production-ready portfolio website that feels modern, premium, responsive and visually
+impressive while remaining fast and maintainable.
+The entire website must be driven by the portfolio.json file and support future content updates without
+modifying component code.
+•
+11
