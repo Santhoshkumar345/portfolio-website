@@ -102,6 +102,19 @@
         "SQL Server",
         "JWT Authentication"
       ]
+    },
+    {
+      "name": "Portfolio Website",
+      "image": "/images/portfolioimage.png",
+      "details": "Personal portfolio website showcasing projects, certifications, experience, and tech stack with a modern responsive design and smooth animations.",
+      "projectUrl": "https://portfolio-website-git-4fbbe2-santhosh-kumars-projects-cc933219.vercel.app/",
+      "repoUrl": "https://github.com/Santhoshkumar345/portfolio-website.git",
+      "techStack": [
+        "Angular 21",
+        "TypeScript",
+        "SCSS",
+        "Vercel"
+      ]
     }
   ],
   "certifications": [

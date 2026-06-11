@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, OnInit } from '@angular/core';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HeroComponent } from './features/hero/hero.component';
 import { ExperienceComponent } from './features/experience/experience.component';
@@ -26,4 +26,12 @@ import { ContactComponent } from './features/contact/contact.component';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {}
+export class App implements OnInit {
+  showSplash = signal(true);
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.showSplash.set(false);
+    }, 2000);
+  }
+}

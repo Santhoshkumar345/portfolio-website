@@ -1,5 +1,14 @@
+@if (showSplash()) {
+  <div class="splash-screen">
+    <div class="splash-content">
+      <h1 class="greeting">Welcome</h1>
+      <p class="sub-greeting">Loading something awesome...</p>
+    </div>
+  </div>
+}
+
 <app-sidebar />
-<main class="main-content">
+<main class="main-content" [class.blurred]="showSplash()">
   <app-hero />
   <app-experience />
   <app-projects />
